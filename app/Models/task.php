@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class task extends Model
 {
     public $table = 'tasks';
+
+    protected $fillable = [
+        'description'
+    ];
+
+    public function isCompleted(){
+        return $this->completed_at !== null;
+    }
 }

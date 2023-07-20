@@ -18,9 +18,13 @@ Route::get('/', [Taskscontroller::class,'index']);
 
 Route::get('/tasks', [Taskscontroller::class,'index']);
 
+Route::patch('/tasks/{id}',[Taskscontroller::class,'update'] );
+
 Route::get('/tasks/create', [Taskscontroller::class,'create']);
 
 Route::post('/tasks',[Taskscontroller::class,'store']);
+
+
 
 //create a task
 
